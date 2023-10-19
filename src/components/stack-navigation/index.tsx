@@ -7,7 +7,9 @@ export default function StackNavigation() {
 
   return (
     <Stack.Navigator
-      screenOptions={{ headerShown: false }}
+      screenOptions={{
+        headerShown: false,
+      }}
       initialRouteName="Campaigns"
     >
       <Stack.Screen name="Campaigns" component={Campaigns} />
