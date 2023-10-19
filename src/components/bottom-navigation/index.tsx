@@ -71,6 +71,7 @@ export default function BottomNavigation() {
         <FAB
           style={tw`absolute right-4 bottom-22 bg-zinc-900`}
           icon="plus"
+          label="Adicionar cliente"
           color="white"
           visible={isFocused}
           onPress={() => {
