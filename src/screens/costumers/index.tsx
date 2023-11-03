@@ -1,6 +1,6 @@
 import { SafeAreaView, View } from "react-native";
 import { Text } from "react-native-paper";
-import AppHeader from "../../components/header";
+import AppHeader from "../../components/app-header";
 
 export default function Costumers() {
   return (

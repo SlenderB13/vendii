@@ -1,7 +1,7 @@
 import { SafeAreaView } from "react-native";
 import tw from "twrnc";
 import StackNavigation from "../../components/stack-navigation";
-import AppHeader from "../../components/header";
+import AppHeader from "../../components/app-header";
 
 export default function Home() {
   return (
