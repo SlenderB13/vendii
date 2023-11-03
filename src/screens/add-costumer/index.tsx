@@ -2,14 +2,13 @@ import { FlatList, SafeAreaView, ScrollView, View } from "react-native";
 import { Button, Text, TextInput } from "react-native-paper";
 import tw from "twrnc";
 import Input from "../../components/text-input";
+import Header from "../../components/header";
 
 export default function AddCostumer() {
   return (
     <SafeAreaView style={tw`h-full w-full bg-white`}>
       <ScrollView>
-        <View style={tw`p-4 bg-zinc-900 flex items-center justify-center`}>
-          <Text style={tw`text-xl text-white`}>Adicione um cliente</Text>
-        </View>
+        <Header title="Adicione um cliente" />
         <View style={tw`py-4 px-4`}>
           <View style={tw`flex flex-col gap-3 mt-4`}>
             <Text style={tw`text-sm text-zinc-400`}>Pessoais</Text>
