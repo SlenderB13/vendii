@@ -1,8 +1,7 @@
 import { Appbar } from "react-native-paper";
 import { useFonts, BebasNeue_400Regular } from "@expo-google-fonts/bebas-neue";
-import tw from "twrnc";
 
-export default function Header() {
+export default function AppHeader() {
   let [fontsLoaded, fontError] = useFonts({
     BebasNeue_400Regular,
   });
