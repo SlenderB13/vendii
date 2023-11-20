@@ -11,7 +11,7 @@ export default function Input({ label, icon }: inputProps) {
   return (
     <TextInput
       label={label}
-      mode="outlined"
+      mode="flat"
       selectionColor="black"
       outlineColor="black"
       activeOutlineColor="black"
