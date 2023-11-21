@@ -1,9 +1,9 @@
-import { FlatList, SafeAreaView, ScrollView, View } from "react-native";
-import { Button, Text, TextInput } from "react-native-paper";
+import { SafeAreaView, ScrollView, View } from "react-native";
+import { Button, Text } from "react-native-paper";
 import tw from "twrnc";
 import Input from "../../components/text-input";
 import Header from "../../components/header";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { storage } from "../../lib/react-native-mmkv";
 import { Costumer } from "../../types/costumer.interface";
 

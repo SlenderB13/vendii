@@ -4,7 +4,6 @@ import AppHeader from "../../components/app-header";
 import Header from "../../components/header";
 import { storage } from "../../lib/react-native-mmkv";
 import { Costumer } from "../../types/costumer.interface";
-import { useEffect } from "react";
 
 export default function Costumers() {
   const costumersJson: string | undefined = storage.getString("costumers");
