@@ -5,26 +5,19 @@ import Input from "../../components/text-input";
 import Header from "../../components/header";
 import { useEffect, useState } from "react";
 import { storage } from "../../lib/react-native-mmkv";
-
-interface Costumer {
-  name: string;
-  address: string;
-  email: string;
-  phone: string;
-  plan: {
-    name?: string;
-    value?: string;
-    startDate?: string;
-  };
-}
+import { Costumer } from "../../types/costumer.interface";
 
 export default function AddCostumer() {
   const [costumer, setCostumer] = useState<Partial<Costumer>>({});
 
   function handleSaveCostumer(): void {
-    console.log(costumer);
-    //storage.set("costumer", JSON.stringify(costumer));
-    //console.log(storage.getString("costumer.name"));
+    storage.set("costumer", JSON.stringify(costumer));
+
+    let existingCustomers = JSON.parse(storage.getString("costumers") || "[]");
+
+    existingCustomers.push(costumer);
+
+    storage.set("costumers", JSON.stringify(existingCustomers));
   }
 
   return (
