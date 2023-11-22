@@ -67,18 +67,6 @@ export default function BottomNavigation() {
           }}
         />
       </Tab.Navigator>
-      <Portal>
-        <FAB
-          style={tw`absolute right-4 bottom-22 bg-zinc-900`}
-          icon="plus"
-          label="Adicionar cliente"
-          color="white"
-          visible={isFocused}
-          onPress={() => {
-            navigation.navigate("Add Costumer");
-          }}
-        />
-      </Portal>
     </Fragment>
   );
 }
