@@ -64,33 +64,42 @@ export default function AddCostumer() {
             <Input
               label="Plano"
               icon="badge-account"
-              onChangeText={(text) =>
+              onChangeText={(text) => {
+                const updatedPlan = Object.assign({}, costumer.plan);
+                updatedPlan.name = text;
+
                 setCostumer((costumer) => ({
                   ...costumer,
-                  plan: { name: text },
-                }))
-              }
+                  plan: updatedPlan,
+                }));
+              }}
             />
             <View style={tw`flex flex-nowrap`}>
               <Input
                 label="Valor"
                 icon="cash"
-                onChangeText={(text) =>
+                onChangeText={(text) => {
+                  const updatedPlan = Object.assign({}, costumer.plan);
+                  updatedPlan.value = text;
+
                   setCostumer((costumer) => ({
                     ...costumer,
-                    plan: { value: text },
-                  }))
-                }
+                    plan: updatedPlan,
+                  }));
+                }}
               />
               <Input
                 label="Vigência"
                 icon="calendar"
-                onChangeText={(text) =>
+                onChangeText={(text) => {
+                  const updatedPlan = Object.assign({}, costumer.plan);
+                  updatedPlan.startDate = text;
+
                   setCostumer((costumer) => ({
                     ...costumer,
-                    plan: { startDate: text },
-                  }))
-                }
+                    plan: updatedPlan,
+                  }));
+                }}
               />
             </View>
           </View>
