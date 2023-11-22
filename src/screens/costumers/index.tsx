@@ -1,9 +1,10 @@
 import { FlatList, SafeAreaView, View } from "react-native";
-import { Text } from "react-native-paper";
 import AppHeader from "../../components/app-header";
 import Header from "../../components/header";
 import { storage } from "../../lib/react-native-mmkv";
 import { Costumer } from "../../types/costumer.interface";
+import { CostumerItem } from "../../components/costumer-item";
+import tw from "twrnc";
 
 export default function Costumers() {
   const costumersJson: string | undefined = storage.getString("costumers");
@@ -19,8 +20,9 @@ export default function Costumers() {
       <View>
         <Header title="Meus clientes" />
         <FlatList
+          style={tw`p-4 min-h-full`}
           data={costumers}
-          renderItem={(item) => <Text>{item.item.name}</Text>}
+          renderItem={(costumers) => <CostumerItem costumer={costumers.item} />}
         />
       </View>
     </SafeAreaView>
