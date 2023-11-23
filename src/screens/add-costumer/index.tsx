@@ -6,9 +6,11 @@ import Header from "../../components/header";
 import { useState } from "react";
 import { storage } from "../../lib/react-native-mmkv";
 import { Costumer } from "../../types/costumer.interface";
+import { useNavigation } from "@react-navigation/native";
 
 export default function AddCostumer() {
   const [costumer, setCostumer] = useState<Partial<Costumer>>({});
+  const navigation = useNavigation();
 
   function handleSaveCostumer(): void {
     storage.set("costumer", JSON.stringify(costumer));
@@ -18,6 +20,8 @@ export default function AddCostumer() {
     existingCustomers.push(costumer);
 
     storage.set("costumers", JSON.stringify(existingCustomers));
+
+    navigation.navigate("Campaigns");
   }
 
   return (
